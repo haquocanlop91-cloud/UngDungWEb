@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Dat{
+            background-color: yellow;
+        }
+        .Khong{
+            background-color: red;
+        }
+        td:nth-child(n + 2){
+            text-align: center;
+        }
+        th{
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <table border="1" align="center" width = "80%">
+        <caption><h2>KET QUA HOC TAP</h2></caption>
+        <thead>
+        <tr>
+            <th rowspan="2">Ho ten</th>
+            <th colspan="3">Mon Hoc</th>
+            <th rowspan="2">Ket Qua</th>
+        </tr>
+        <tr>
+            <th>Toan</th>
+            <th>Van</th>
+            <th>Ngoai Ngu</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Tran Van Thanh</td>
+            <td>8</td>
+            <td>7</td>
+            <td>5</td>
+            <td class="Dat">Dat</td>
+        </tr>
+        <tr>
+            <td>Le Thanh Son</td>
+            <td>4</td>
+            <td>9</td>
+            <td>6</td>
+            <td class="Khong">Khong Dat</td>
+        </tr>
+        <tr>
+            <td>Nguyen THi Tuyet</td>
+            <td>8</td>
+            <td>9</td>
+            <td>5</td>
+            <td class="Dat">Dat</td>
+        </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4">Tong So hoc Sinh dat</td>
+                <td>2</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
