@@ -1,0 +1,19 @@
+h1{
+    text-shadow: 15px 15px 1px rgba(0, 0, 0, 0.3);
+}
+.f{
+    text-transform: capitalize;
+}
+.r{
+        text-transform: uppercase;
+}
+.no{
+    text-transform: lowercase;
+}
+p::first-letter {
+    font-size: 2em;
+    font-weight: bold;
+}
+p::first-line   {
+    font-weight: bold;
+}
