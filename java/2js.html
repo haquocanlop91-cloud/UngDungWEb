@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="2.js"></script>
+</head>
+<body>
+    <h3 id= "days"></h3>
+    <h3 id = "date"></h3>
+    <h3 id = "time"></h3>
+    <button onclick="showDate()">Xem Ngay Gio</button>
+    <script>
+        var month = Number(prompt("nhap thang"));
+        var year = Number(prompt("Nhap nam", 2000));
+        var day = CaculateDay(month,year);
+        document.getElementById("days").innerHTML = "thang" + month + "nam" + year + "ngay" + days;
+    </script>
+</body>
+</html>

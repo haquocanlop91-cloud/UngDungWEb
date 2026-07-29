@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Sta(){
+            var s =document.getElementById("txts").value;
+            var arr = s.plit(" ");
+            var i , words = 0;
+            var arrkq = [];
+            for(i = 0 ;i  <= 128; i++)
+                arrKq[i] = 0;
+            for(i = 0; i < arr.length;i++){
+                if(arr[i].trim() != "")
+                    words++;
+            }
+            var kq = "Characters: " + s.length + "<br>" + 
+            "Words: " + words + "<br>";
+            for(i = 0; i < s.length;i++){
+                if(s[i] >= 'a' && s[i] <= 'z')
+                    arrkq[s.charCodeAt(i) - 32]++;
+                else    
+                    arrkq[s.charCodeAt(i)]++;
+            }
+            for(i = 0; i < arrKq.length;i++){
+                if(arrkq[i] > 0)
+                    kq += "Character " + String.fromCharCode(i) + " ': " + arrkq[i] + "<br>";
+            }
+            document.getElementById("kq").innerHTML = kq;
+        }
+    </script>
+</head>
+<body>
+    <table>
+    <caption><h3>String Sta</h3></caption>
+    <tr>
+        <td>String: </td>
+        <td> <input type="text" id="txt5" size="50" value="hello"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><button onclick="Sta()">Sta</button></td>
+    </tr>
+    <tr>
+       <td></td>
+       <td><p id= "kq"></p></td>
+    </tr>
+    </table>
+</body>
+</html>
