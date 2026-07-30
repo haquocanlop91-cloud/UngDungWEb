@@ -13,9 +13,13 @@
     <button onclick="showDate()">Xem Ngay Gio</button>
     <script>
         var month = Number(prompt("nhap thang"));
+        do{
+            if(month < 1 || month > 12)
+                month = Number(prompt("NHAP SAI!!\nNhap Thang 1-12: "))
+        }while(month < 1 || month > 12);
         var year = Number(prompt("Nhap nam", 2000));
         var day = CaculateDay(month,year);
-        document.getElementById("days").innerHTML = "thang" + month + "nam" + year + "ngay" + days;
+        document.getElementById("days").innerHTML = " thang " + month + " nam " + year + " ngay " + day;
     </script>
 </body>
 </html>

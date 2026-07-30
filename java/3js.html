@@ -6,14 +6,14 @@
     <title>Document</title>
     <script>
         function Sta(){
-            var s =document.getElementById("txts").value;
-            var arr = s.plit(" ");
+            var s = document.getElementById("txt5").value;
+            var arr = s.split(" ");
             var i , words = 0;
             var arrkq = [];
-            for(i = 0 ;i  <= 128; i++)
-                arrKq[i] = 0;
+            for(i = 0 ;i < 128; i++)
+                arrkq[i] = 0;
             for(i = 0; i < arr.length;i++){
-                if(arr[i].trim() != "")
+                if(arr[i] != "")
                     words++;
             }
             var kq = "Characters: " + s.length + "<br>" + 
@@ -24,7 +24,7 @@
                 else    
                     arrkq[s.charCodeAt(i)]++;
             }
-            for(i = 0; i < arrKq.length;i++){
+            for(i = 0; i < arrkq.length;i++){
                 if(arrkq[i] > 0)
                     kq += "Character " + String.fromCharCode(i) + " ': " + arrkq[i] + "<br>";
             }
@@ -45,7 +45,7 @@
     </tr>
     <tr>
        <td></td>
-       <td><p id= "kq"></p></td>
+       <td><p id="kq"></p></td>
     </tr>
     </table>
 </body>
