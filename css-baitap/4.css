@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.div1{
+    background-color: blueviolet;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div1 p{
+    font-weight: bold;
+    text-shadow: 5px 5px 1px gray;
+}
+img{
+    border: 3px solid red;
+}
+.In3{
+    background-color: aqua;
+    border: 5px dotted rgb(44, 5, 200);
+    border-radius: 20px 0px 20px 0px;
+}
+.div2 .In2{
+    background-color: aqua;
+    border: 5px dashed rgb(156, 6, 116);
+    border-radius: 0px 20px 0px 20px ;
+}
+.In4{
+    background-color: rgb(4, 96, 26);
+    border: 2px solid yellow;
+}
+img, .In2, .In3, .In4{
+    width: 150px;
+    height: 150px;
+    float: left;
+    margin: 30px;
+}
