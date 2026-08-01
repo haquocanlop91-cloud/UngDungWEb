@@ -6,37 +6,101 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
 }
+
 .div1{
     background-color: blueviolet;
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 .div1 p{
     font-weight: bold;
     text-shadow: 5px 5px 1px gray;
 }
-img{
-    border: 3px solid red;
-}
-.In3{
-    background-color: aqua;
-    border: 5px dotted rgb(44, 5, 200);
-    border-radius: 20px 0px 20px 0px;
-}
-.div2 .In2{
-    background-color: aqua;
-    border: 5px dashed rgb(156, 6, 116);
-    border-radius: 0px 20px 0px 20px ;
-}
-.In4{
-    background-color: rgb(4, 96, 26);
-    border: 2px solid yellow;
-}
-img, .In2, .In3, .In4{
-    width: 150px;
-    height: 150px;
+.div2 > div{
+    height: 200px;
+    width: 200px;
     float: left;
-    margin: 30px;
+    margin: 20px;
+}
+.div2 img{
+    width: 100%;
+    border: 5px solid red;
+    display: block;
+}
+.div2 .box1{
+    position: relative;
+}
+.box1 h2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.div2 > div:not(:first-child){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    color: yellow;
+    font-weight: bold;
+    font-size: 30px;
+}
+.box2{
+    border: 4px dashed #331ce6;
+    border-radius: 0px 20px 0px 20px;
+}
+.box3{
+    border: 4px dotted #331ce6;
+    border-radius: 30px 0px 30px 0px;
+}
+.box4{
+    border: 4px solid yellow;
+    background-color: black;
+    animation: rotate 3s infinite;
+}
+.div1 p{
+    animation: zoom 5s ease-in-out infinite;
+}
+@keyframes zoom{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.box1{
+    animation: DoiAnh 6s infinite;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 4px solid red;
+}
+@keyframes DoiAnh{
+    0%{
+        background-image: url(../images/3.jpg);
+    }
+    50%{
+        background-image: url(../images/headphone.jpg);
+    }
+    100%{
+        background-image: url(../images/3.jpg);
+    }
+}
+@keyframes rotate{
+    0%{
+        transform: rotateX(10deg);
+    }
+    50%{
+        transform: rotate(90deg);
+    }
+    100%{
+        transform: rotate(180deg);
+    }
 }
