@@ -4,31 +4,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="5js.css">
     <script>
         function rev(){
-            var s = document.getElementById("txt51").value;
-            var arr = s.split(" ");
-            var i , kq = "";
-            for(i = arr.length - 1; i >= 0;i--)
+            var val = document.getElementById("s1").value;
+            var arr = val.split(" ");
+            var i = 0, kq = "";
+            for(i = arr.length - 1; i >= 0;i--){
                 kq += arr[i].trim() + " ";
-            document.getElementById("txt51").value = kq.trim();
+            }
+            document.getElementById("s1").value = kq.trim();
         }
         function normal(){
-            var s = document.getElementById("txt51").value;
-            arr = s.split(" ");
-            var i , kq = "",tmp;
+            var val = document.getElementById("s1").value;
+            var arr = val.split(" ");
+            let i = 0; kq = "", tmp;
             for(i = 0;i < arr.length;i++){
-                tmp = arr[i].trim().tolowercase();
+                var tmp = arr[i].trim().toLowerCase();
                 if(tmp != ""){
-                    tmp = tmp.substr(0,1).touppercase() + tmp.substr(1);
+                    tmp = tmp.charAt(0).toUpperCase() + tmp.slice(1);
                     kq += tmp + " ";
                 }
             }
-            document.getElementById("txt51").value = kq.trim();
+            document.getElementById("s1").value = kq.trim();
         }
+        function isAlpha(tmp){
+            return (tmp >= 'a' && tmp <= 'z') || (tmp >= 'A' && tmp <= 'Z');
+        }
+        function decode(){
+        var val = document.getElementById("s1").value;
+        var n = parseInt(document.getElementById("Donvi").value);
+        var i = 0, kq = "";
+    
+        for(i = 0; i < val.length; i++){
+            var tmp = val[i];
+        
+            if(isAlpha(tmp)){
+            // Kiểm tra chữ thường
+                if(tmp >= 'a' && tmp <= 'z'){
+                if(tmp.charCodeAt(0) + n > 'z'.charCodeAt(0)){
+                    tmp = String.fromCharCode('a'.charCodeAt(0) + (n - ('z'.charCodeAt(0) - tmp.charCodeAt(0)) - 1));
+                }
+                else{
+                    tmp = String.fromCharCode(tmp.charCodeAt(0) + n);
+                }
+            }
+            // Kiểm tra chữ hoa
+            else if(tmp >= 'A' && tmp <= 'Z'){
+                if(tmp.charCodeAt(0) + n > 'Z'.charCodeAt(0)){
+                    tmp = String.fromCharCode('A'.charCodeAt(0) + (n - ('Z'.charCodeAt(0) - tmp.charCodeAt(0)) - 1));  // ← 'A', không phải 'a'
+                }
+                else{
+                    tmp = String.fromCharCode(tmp.charCodeAt(0) + n);
+                }
+            }
+        }
+        kq += tmp;
+    }
+    document.getElementById("s1").value = kq;
+}
+    function Alter(){
+        var s1 = document.getElementById("s1").value;
+        var s2 = document.getElementById("s2").value;
+        var s3 = document.getElementById('s3').value;
+        var i = 0, arr = s1.split(" "), kq = "";
+        for(i = 0;i < arr.length; i++){
+            if(arr[i].toLowerCase() == s2.toLowerCase()){
+                kq += s3 + " ";
+            }else
+                kq += arr[i] + " ";
+        }
+        document.getElementById("s1").value = kq.trim();
+    }
+    function inSert(){
+        var pos = parseInt(document.getElementById("No").value);
+        var s1 = document.getElementById("s1").value;
+        var s2 = document.getElementById("s2").value;
+        var kq = "";
+        if(pos < 0){
+            alert("Khong hop le, khong Am");
+            document.getElementById("No").focus();
+            return;
+        }
+        if(pos > s1.length){
+            alert("Khong vuot qua do dai chuoi");
+            document.getElementById("No").focus();
+            return;
+        }
+        kq += s1.slice(0, pos) + s2 + s1.slice(pos);
+        document.getElementById("s1").value = kq;
+    }
+    function Xoa(){
+        var s1 = document.getElementById("s1").value;
+        var s2 = document.getElementById("s2").value;
+        var i = 0, kq = "", arr = s1.split(" ");
+        var check = false;
+        for( i = 0; i < arr.length;i++){
+            if(arr[i].toLowerCase() == s2.toLowerCase()){
+                check = true;
+                continue;
+            }
+            kq += arr[i] + " ";
+        }
+        if(!check)
+            alert("Khong ton tai");
+        document.getElementById("s1").value = kq.trim();
+    }
     </script>
 </head>
 <body>
-    
+    <div class="div1">
+        <div class="h2"><h2><marquee>Chuong trinh xu li chuoi</marquee></h2></div>
+        <div class="for">
+            <label>Chuoi S1:  </label>
+            <input spellcheck="false" type="text" id="s1" value="Why IS JAvAScripT harDer ThaN js">
+        </div>
+        <div class="for">
+            <label>Chuoi S2: </label>
+            <input type="text" id="s2" value="Insert"  spellcheck="false"><br>
+        </div>
+        <div class="for">
+        <label>Chuoi S3: </label>
+        <input type="text" id="s3" value="Js"  spellcheck="false"><br>
+        </div>
+        <div class="for">
+        <label>Vi tri chen:</label>
+        <input type="number" id="No" value="1" spellcheck="false"><br>
+        </div>
+        <div class="for">
+        <label>Don vi Ma Hoa: </label>
+        <input type="number" id="Donvi" value="1" spellcheck="false"><br>
+        </div>
+        
+        <button onclick="normal()">Chuan Hoa Chuoi</button>
+        <button onclick="rev()">Dao Chuoi</button>
+        <button onclick="Alter()">Thay the S2 bang S3</button>
+        <button onclick="inSert()">chen S2 vao trong S1</button>
+        <button onclick="Xoa()">Xoa S2 trong S1</button>
+        <button onclick="decode()">Ma Hoa</button>
+    </div>
 </body>
 </html>
