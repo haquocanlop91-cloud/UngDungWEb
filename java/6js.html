@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function tinh(){
+            var s1 = Number(document.getElementById("s1").value);
+            var s2 = Number(document.getElementById("s2").value);
+            var radio = document.getElementsByName("d");
+            var i = 0, tin = "";
+            for(i = 0; i < radio.length;i++){
+                if(radio[i].checked){
+                    tin = radio[i].id;
+                }
+            }
+            var kq;
+            switch(tin){
+                case 'C':
+                    kq = s1  + s2;
+                    break;
+                case 'T':
+                    kq = s1 - s2;
+                    break;
+                case 'N':
+                    kq = s1 * s2;
+                    break;
+                case "Chia":
+                    kq = s1 / s2;
+                    break;
+                default:
+                    kq = "hahe";
+            }
+            document.getElementById("kq").value = kq;
+        }
+    </script>
+</head>
+<body>
+    <table border="1px solid">
+        <tr>
+            <th colspan="2">Cac Phep tinh So Hoc</th>
+        </tr>
+        <tr>
+            <td>So thu 1</td>
+            <td><form><input type="number" id="s1" value="1"></form></td>
+        </tr>
+        <tr>
+            <td>So thu 2</td>
+            <td><form><input type="number" id="s2" value="1"></form></td>
+        </tr>
+        <tr>
+            <td>Chọn phép toán </td>
+            <td><form><label><input type="radio" name="d" id="C" checked>Cong</label><br>
+                <label><input type="radio" name="d" id="T">Tru</label><br>
+                <label><input type="radio" name="d" id="N">Nhan</label><br>
+                <label><input type="radio" name="d" id="Chia">Chia</label></form>
+            </td>
+        </tr>
+        <tr>
+            <td><button onclick="tinh()">Thuc hien</button></td>
+            <td><form><input type="number" id="kq"></form></td>
+        </tr>
+    </table>
+</body>
+</html>
