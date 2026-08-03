@@ -1,0 +1,80 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+input, select,button, textarea{
+    margin: 5px;
+}
+.bu{
+    width: 70px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: rgb(54, 243, 7);
+    color: white;
+    font-weight: bold;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 5px auto;
+    width: 100px;
+    border: none;
+    box-shadow: 1px 1px 5px rgb(9, 242, 13);
+    transition: all 0.5s ease-in;
+}
+.b{
+    width: 40px;
+    font-size: 10px;
+    font-weight: bold;
+    height: 20px;
+    background-color: rgb(218, 15, 15);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.bu:hover{
+    background-color: #0e6d07;
+    border: 2px solid white;
+    transform: scale(1.05);
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+div{
+    box-shadow: 1px 1px 20px gray;
+    padding: 30px;
+    border-radius: 20px;
+}
+h2{
+    text-align: center;
+    margin-bottom: 10px;
+}
+input, select{
+    width: 200px ;
+    height: 30px ;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 1px 1px 5px gray;
+    outline: none;
+    text-align: center;
+    margin: 10px;
+}
+section option{
+    border-radius: 10px;
+}
+p{
+    width: 200px ;
+    padding-left: 5px;
+    font-weight: 900;
+}
+textarea{
+    border-radius: 5px;
+    border: none;
+    box-shadow: 1px 1px 8px gray;
+    width: 95%;
+    margin: 10px ;
+}

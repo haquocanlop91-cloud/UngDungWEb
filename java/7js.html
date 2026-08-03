@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="7js.css" rel="stylesheet">
+    <script>
+        function al(c){
+            return (c <= 'z' && c >= 'a') || (c <= 'Z' && c >= 'A')
+        }
+        function Hi(){
+            var ns = new Date(document.getElementById("da").value);
+            var now = new Date();
+            var nam = document.getElementById("name").value;
+            var mk = document.getElementById("ps").value;
+            var ten = nam.length - 1, Ten = "";
+            if(mk.includes(" ")){
+                    alert("Mat Khau ko chua khoang trang, viet lien khong dau");
+                return;}
+            while(al(nam[ten])){
+                ten--;
+            }
+            while(true){
+                if(nam[ten] == " "){
+                    Ten = nam.slice(ten + 1);
+                    break;
+                }
+                ten--;
+            }
+            var Ch = 0, i = 0;
+            for(i = 0;i < mk.length;i++){
+                Ch++;
+            }
+            var Age = now.getFullYear() - ns.getFullYear();
+            if((ns.getMonth() > now.getMonth())||
+                 ((ns.getMonth() == now.getMonth()) && (now.getDate() < ns.getDate()))){
+                 Age--;
+                 }
+           var chon = document.getElementById("se").value;
+           document.getElementById("are").innerHTML = 
+    "Chao Mung " + nam + "\nBan la " + Ten + "\nMat Khau cua ban co " + Ch + "ki tu" + "\nTuoi Ban la " + Age + "\nVan de ban quan tam la " + chon;
+        }
+        function hide(){
+            var ps = document.getElementById("ps");
+            if(ps.type == "password"){
+                ps.type = "text";
+                document.getElementById("b").innerHTML = "Hide";
+            }
+            else{
+                ps.type = "password";
+                 document.getElementById("b").innerHTML = "Show";
+            }
+        }
+        function rese(){
+            document.getElementById("re").reset();
+
+        }
+        function erase(){
+            document.getElementById("are").innerHTML = "";
+        }
+    </script>
+</head>
+<body>
+    <div>
+    <form id="re">
+    <table style="border-collapse: collapse;" border="2px solid">
+        <h2>DANG KY THANG VIEN</h2>
+        <tr>
+            <td><p>Ten Dang Nhap</p></td>
+            <td><input type="text" required id="name" value="Nguyen Van"></td>
+        </tr>
+        <tr>
+            <td><p>Mat Khau</p></td>
+            <td><input type="password" id="ps" value="fhff" required><button id="b" class="b" type="button" onclick="hide()">Show</button></td>
+        </tr>
+        <tr>
+            <td><p>Ngay Sinh</p></td>
+            <td><input type="date" id="da" required value="2007-10-01"></td>
+        </tr>
+        <tr>
+            <td><p>Van de ban quan tam</p></td>
+            <td><select id="se">
+                <option name="v">Van hoc nghe thuat</option>
+                <option name="k">Kinh Te </option>
+                <option name="t">The thao</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><button class="bu" type="button" onclick="Hi()">Dang ky</button></td>
+            <td><button class="bu" type="button" onclick="rese() ; erase()">Huy</button></td>
+        </tr>
+        <tr>
+            <td colspan="2"><textarea cols="50" rows="7"id="are"></textarea></td>
+        </tr>
+    </table>
+    </form>
+    </div>
+</body>
+</html>
