@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="8js.css">
+    <script>
+        function Thuc(){
+            var Nd = document.getElementById("nd").value;
+            document.getElementById("h1").innerHTML = Nd;
+        }
+        function Nen(){
+            var Nen = document.getElementById("Nenn").value;
+            document.getElementById("h1").style.backgroundColor = Nen;
+        }
+        function Chu(){
+            var Chu = document.getElementById("Chu").value;
+            document.getElementById("h1").style.color= Chu;
+        }
+    </script>
+</head>
+<body>
+    <div class="div1">
+        <h1 id="h1">Enter</h1>
+        <div class="for">
+        <label>Nhap noi Dung: </label>
+        <input type="text" id="nd" value="Welcome Home!!"><button class="en" onclick="Thuc()">Enter</button><br>
+        </div>
+        <div class="for1">
+        <label>Mau Nen: </label>
+        <input type="color" id="Nenn" value="red"><br>
+        </div>
+        <div class="for1">
+        <label>Mau Chu:</label>
+        <input type="color" value="#42f5e3" id="Chu"><br>
+        </div>
+        <button type="button" class="but" onclick="Nen(), Chu()">Thuc hien</button>
+    </div>
+</body>
+</html>
