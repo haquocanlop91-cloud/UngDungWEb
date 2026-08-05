@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="9js.css" rel="stylesheet">
+   
+</head>
+<body>
+    <div class="div1">
+        <img src="../images/images.png">
+        <h1 >Nguyen Van A</h1>
+        <p class="mail">Email:nguyen.vana@example.com | Dien thoai: 67676776676</p>
+        <h2>Ky Nang</h2>
+        <hr>
+        <div class="skill" id="c">
+            <div class="name">HTML</div>
+            <div class="name">Java Script</div>
+            <div class="name">Css</div>
+        </div>
+        <button class="But" onclick="Them()">Them Ky Nang</button>
+        <h2>Kinh nghiem lam viec</h2>
+        <hr>
+        <h3>Frontend Developer tai cong ty A</h3>
+        <p class="p1">2018 - 2022 - Phat trien Nothing.</p>
+        <h3>Project Manager tai Cong ty A</h3>
+        <p class="p1">2022 - 2024 - Phat trien Nothing</p>
+        <div class="exp">
+            <p class="new">Them kinh nghiem</p>
+            <label>Kinh nghiem:</label><br>
+            <input type="text" id="Expp"><br>
+            <label>Mo ta:</label><br>
+            <input type="text" id="dess">
+        </div>
+        <button class="But" onclick="Exp()">Them Kinh Nghiem</button>
+        <h2>Hoc Van</h2>
+        <hr>
+        <h3 class="h3">Truong Dai Hoc ZZZ</h3>
+        <p class="hv">2000-2026</p>
+        <p>Nganh Khoa Hoc May Tinh</p>
+    </div>
+    <script>
+       function Them(){
+        var Skill = prompt("Them ky nang:");
+
+    if(Skill != null && Skill.trim() != ""){
+        var div = document.createElement("div");
+        div.className = "name";
+        div.innerHTML = Skill;
+
+        document.getElementById("c").appendChild(div);
+    }
+    else{
+        alert("Khong hop le");
+    }
+}
+        function Exp(){
+            var ex = prompt("Kinh Nghiem: ");
+            var des = prompt("Mo Ta:");
+            document.getElementById("Expp").value = ex;
+            document.getElementById("dess").value = des;
+        }
+    </script>
+</body>
+</html>

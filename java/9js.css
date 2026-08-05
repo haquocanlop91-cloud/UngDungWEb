@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.div1{
+    box-shadow: 1px 1px 20px;
+    border-radius: 20px;
+    padding: 40px;
+    margin-top: 300px;
+    width: 60%
+}
+img{
+    border: 3px solid #139dd8;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+}
+h1{
+    text-align: center;
+    margin: 20px;
+}
+.mail{
+    color: #6c6262;
+    text-align: center;
+    margin: 20px;
+}
+hr{
+    margin: 5px 0px 20px ;
+    border: 1.5px solid #139dd8;
+}
+.skill{
+    display: flex;
+    margin: 15px 0px 20px;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.name{
+    background-color: #139dd8;
+    color: white;
+    padding: 15px;
+    border-radius: 20px;
+    height: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 15px;
+}
+.But{
+    background-color: #139dd8;
+    color: white;
+    border-radius: 20px;
+    height: 40px;
+    padding: 15px;
+    align-items: center;
+    display: flex;
+    border: none;
+    margin: auto auto 10px auto;
+}
+h3{
+    color: #252222;
+}
+.p1{
+    margin: 3px 40px;
+}
+.exp{
+    border: 0.5px solid #a2a2a2;
+    margin: 30px 0px 10px ;
+    padding: 30px 10px 10px 10px;
+    position: relative;
+    border-radius: 10px ;
+}
+.new{
+    position: absolute;
+    transform: translate(0,-220%);
+    background-color: white;
+    width: 150px;
+    text-align: center;
+    border-radius: 10px;
+}
+input{
+    width: 300px;
+    margin: 7px 0px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid white;
+    box-shadow: 1px 1px 4px;
+    outline: none;
+    text-align: center;
+    transition: all 0.5s ease-in;
+}
+input:hover{
+    transform: scale(1.01);
+    border: 2px solid #139dd8;
+    box-shadow: none;
+}
+.hv{
+    margin: 5px 0px 20px;
+    color: #a2a2a2;
+}
+.But:active{
+    background-color: #0e6991;
+    transition: 0.1s ease;
+    transform: scale(1.05);
+}
