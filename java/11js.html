@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="11js.css">
+</head>
+<body>
+    <div class="div1">
+        <h3>Cac Dang Bieu Do</h3>
+        <div class="types">
+            <p>Charts Type</p>
+            <form>
+                <input type="radio" name="haha" id="P">Pie
+
+                <input type="radio" name="haha" id="L">Line
+                <input type="radio" name="haha" id="C">Columns
+            </form>
+        </div>
+        <div class="input">
+            <label>Tieu De: </label>
+            <input type="text" id="title" spellcheck="false" value="Xuat Sac, Gioi, Kha, Trung Binh, Yeu"><br>
+            <label>Gia Tri: </label>
+            <input type="text" id="giatri" value="90,10,43,54,45"><button onclick="Canvas()">Draw Chart</button>
+        </div>
+         <canvas id="mycanvas" height="200" style="border: 1px solid rgb(156, 148, 148);margin-top: 30px ;"></canvas>
+    </div>
+    <script src="11js.js"></script>
+</body>
+</html>
