@@ -1,16 +1,25 @@
 let canvas = document.getElementById("my");
 let ctx = canvas.getContext("2d");
 canvas.style.background = "#10deec"  
-
-ctx.save();
-ctx.beginPath()
-ctx.fillStyle = "#c32020";
-ctx.arc(100,100,100,0,Math.PI * 2,false);
-ctx.fill();
-ctx.stroke();
-ctx.closePath(); 
-ctx.restore();
-
+var x =0, y = 150;
+function move(){
+    ctx.clearRect(0,0,canvas.width, canvas.height);
+    ctx.save();
+    ctx.beginPath()
+        ctx.fillStyle = "#c32020";
+    ctx.arc(x,y,100,0,Math.PI * 2,false);
+    ctx.fill();
+    ctx.stroke();
+    ctx.closePath();
+    ctx.restore();
+    x += 1;
+    if(x > canvas.width + 50){
+        x = -50;
+    }
+    // Lặp lại
+    requestAnimationFrame(move);
+}
+move();
 ctx.save();
 ctx.translate(107,-35);
 ctx.rotate(45 * Math.PI / 180)

@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.Drop{
+    position: relative;
+}
+.item button{
+    display: block;
+    width: 100px;
+    border: none;
+}
+ .item{
+    position: absolute;
+    border: 1px solid black;
+    display: none;
+}
+.Drop:hover .item{
+    display: block;
+}
+.Drop:hover .item button:hover{
+    background-color: aqua;
+}
