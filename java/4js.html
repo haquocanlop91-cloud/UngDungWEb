@@ -11,7 +11,7 @@
             var i;
             var n = parseInt(document.getElementById("sort").value);
             for(i = 0; i < n;i++){
-                arr[i] = Math.floor(Math.random() * 100 % 50);
+                arr[i] = Math.floor(Math.random() * 91) + 10;
             }
             document.getElementById("txtArr1").value = arr.join(" ");
         }
