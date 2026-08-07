@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        function Add(){
+            var a = $("#ten").val();
+            if(a != ""){
+            $("#te").append("<li>" + a + "</li>");
+            $("#ten").val("");
+            }
+        }
+        function re(){
+            $("ten").val("");
+            $("te").html('<li>Python</li><li>PHP</li>');
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <form>
+        <label>Nhap ten Mon hoc: </label>
+        <input type="text" id="ten">
+        <ul id="te">
+            <li>Python</li>
+            <li>PHP</li>
+        </ul>
+        <button type="button"  onclick="Add()">Them Mon Hoc</button>
+        <button  onclick="re()">re</button>
+        </form>
+    </div>
+</body>
+</html>
