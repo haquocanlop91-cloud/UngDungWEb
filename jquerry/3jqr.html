@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+     <script>
+        $(document).ready(function(){
+            $("#but").click(function(){
+                $("table tr:even").css("background-color","yellow");
+            });
+            $("#res").click(function(){
+                $("table tr:even").css("background-color","");
+            });
+        });
+    </script>
+</head>
+<body>
+    <table border="1px solid" style="border-collapse: collapse;">
+        <caption>BANG Gia Vat Tu</caption>
+        <tr style="border-color: aquamarine;">
+            <th>Ten vat Tu</th>
+            <th>Don vi tinh</th>
+            <th>Don Gia</th>
+        </tr>
+        <tr style="border-color: red;">
+            <td>Cát</td>
+            <td>Khối</td>
+            <td>77.000</td>
+        </tr>
+        <tr style="border-color: red;">
+            <td>Đá</td>
+            <td>Khối</td>
+            <td>90.000</td>
+        </tr>
+        <tr style="border-color: red;">
+            <td>Xi mang loai 1</td>
+            <td>bao </td>
+            <td>120.000</td>
+        </tr>
+        <tr style="border-color: red;">
+            <td>Xi mang loai 2</td>
+            <td>Bao </td>
+            <td>100.000</td>
+        </tr>
+    </table>
+    <button id="but">Doi mau nen</button>
+    <button id="res">Mau nen mat dinh</button>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="4jqr.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".mau").click(function(){
+                var value = $(this).css("background-color");
+                $("#div2").css("background-color", value);
+                if(value == "rgb(0, 0, 255)")
+                    $(".pp").text("Mau ban chon la: " + "mau xanh " + value).css("color", value);
+                if(value == "rgb(255, 0, 0)")
+                    $(".pp").text("Mau ban chon la: " + "mau do " + value).css("color", value);
+                if(value == "rgb(255, 0, 255)")
+                    $(".pp").text("Mau ban chon la: " + "mau tim " + value).css("color", value);
+                if(value == "rgb(0, 255, 38)")
+                $(".pp").text("Mau ban chon la: " + "mau xanh la " + value).css("color", value);
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>Click len cac hinh vuong: </p>
+    <div class="div1" >
+        <div class="mau" style="background-color: blue;">
+        </div>
+        <div class="mau" style="background-color: red;">
+        </div>
+        <div class="mau" style="background-color: rgb(255, 0, 255);">
+        </div>
+        <div class="mau" style="background-color: rgb(0, 255, 38);">
+        </div>
+    </div>
+    <p class="pp"></p>
+    <div class="div2" id="div2">
+    </div>
+</body>
+</html>

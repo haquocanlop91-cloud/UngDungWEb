@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+}
+.div1{
+    background-color: rgb(34, 170, 170);
+    width: 30%;
+    height: 100lvh;
+}
+.div2{
+    background-color: aquamarine;
+    width: 100%;
+}
+.div2{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10;
+}

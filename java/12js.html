@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="12.css">
+    <script>
+        function Loc(){
+            var a = document.getElementById("select").value;
+            var anh = document.getElementsByClassName("anh");
+            var i = 0;
+            for(i = 0; i < anh.length; i++){
+                if(a == 'all'){
+                    anh[i].style.display = "";
+                }else if(anh[i].classList.contains(a)){
+                    anh[i].style.display = "";
+                }
+                else
+                    anh[i].style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="div1">
+        <select name="chon" id="select" onchange="Loc()">
+            <option value="all">ALL</option>
+            <option value="a">Anh a</option>
+            <option value="b">Anh b</option>
+        </select>
+    </div>
+    <div class="div2">
+        <img class="anh a" src="../images/1.jpg">
+        <img class="anh a" src="../images/2.jpg">
+        <img  class="anh b" src="../images/3.jpg">
+        <img class="anh b" src="../images/4.jpg">
+    </div>
+
+</body>
+</html>

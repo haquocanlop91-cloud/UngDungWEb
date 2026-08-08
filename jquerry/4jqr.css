@@ -1,0 +1,13 @@
+.mau{
+    width: 100px;
+    height: 100px; 
+}
+.div1{
+    display: flex;
+    gap: 10px;
+}
+.div2{
+    border: 10px solid black;
+    width: 500px;
+    height: 300px;
+}
