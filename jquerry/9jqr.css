@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    gap: 10px;
+    margin: 50px;
+}
+.div1{
+    background-color: #ff8;
+    width: 50%;
+    height: 50vh;
+}
+.div2{
+    width: 50%;
+    background-color: #ff8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid blue;
+}
+h1{
+    font-size: 100px;
+}
+.ca{
+    border: 3px solid blue;
+    margin: 10px 0px 0px 0px;
+    padding: 15px;
+    position: relative;
+}
+.div1 .ca:nth-child(2){
+    padding-left: 50px;
+}
+.odd{
+    background-color: lime;
+}
+.even{
+    background-color: aquamarine;
+}
+p{
+    background-color: #ff8;
+    position: absolute;
+    transform: translate(-20%,-140%);
+    padding: 0px 5px 0px 5px;
+}
+#color{
+    margin: 20px;
+}

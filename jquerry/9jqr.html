@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="9jqr.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#color").change(function(){
+                var col = $("#color").val();
+                $("#h1").css("color",col);
+            });
+            $("input[name='ngu']").change(function(){
+                    if($("#c").is(":checked")){
+                        $("#h1").css("text-shadow", "5px 5px 20px gray");
+                    } 
+                    else
+                        $("#h1").css("text-shadow" , "");
+
+            });
+            $("button").eq(0).click(function(){
+                $(".ca ol li").last().remove();
+            });
+            $("button").eq(1).click(function(){
+                $("ol").html('<li>HTML</li><li>CSS</li><li>JS</li><li>JQUERRY</li>');
+                $("ol li:even").css("background-color","lime");
+                $("ol li:odd").css("background-color","aquamarine");
+            });
+        });
+            
+    </script>
+</head>
+<body>
+    <div class="div1">
+        <div class="ca">
+            <p>Chon</p>
+            <label>
+            <input type="radio" id="c" name="ngu" onclick="shadow()" style="margin-right: 10px;">Chu co bong<br>
+            </label>
+            <label>
+            <input type="radio" id="k" name="ngu" onclick="shadow()" style="margin-right: 10px;">Chu khong co bong<br>
+            </label>
+            <label>Chon Mau Chu: </label>
+            <input type="color" id="color" onchange=""><br>
+            <button>Xoa Phan tu cuoi</button>
+            <button onclick="re()">Phuc hoi</button>
+        </div>
+        <div class="ca">
+            <p>Click Vao mot chuoi</p>
+            <ol id="ol">
+                <li class="odd">HTML</li>
+                <li class="even">CSS</li>
+                <li class="odd">JS</li>
+                <li class="even">JQUERRY</li>
+            </ol>
+        </div>
+    </div>
+    <div class="div2">
+        <h1 id="h1">HTML</h1>
+    </div>
+</body>
+
+</html>
